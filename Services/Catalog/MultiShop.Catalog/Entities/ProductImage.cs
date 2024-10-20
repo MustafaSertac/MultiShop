@@ -5,9 +5,7 @@ namespace MultiShop.Catalog.Entities
 {
     public class ProductImage
     {
-            {
-
-
+           
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string ProductImageId { get; set; }
