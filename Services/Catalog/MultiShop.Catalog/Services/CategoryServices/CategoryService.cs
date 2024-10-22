@@ -13,7 +13,8 @@ namespace MultiShop.Catalog.Services.CategoryServices
 
         public CategoryService(IMapper mapper,IDatabaseSettings _databaseSetting)
         {
-            var client= new MongoClient(_databaseSetting.CategoryCollectionName);
+            Console.WriteLine(_databaseSetting.CategoryCollectionName);
+            var client= new MongoClient(_databaseSetting.ConnectionString);
             var database=client.GetDatabase(_databaseSetting.DatabaseName);
             _categoryCollection = database.GetCollection<Category>(_databaseSetting.CategoryCollectionName);
             _mapper = mapper;

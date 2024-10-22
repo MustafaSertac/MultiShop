@@ -11,7 +11,7 @@ namespace MultiShop.Catalog.Controllers
     {
             private readonly IProductDetailService _ProductDetailService;
 
-        public ProductDetailsController(ProductDetailService ProductDetailService)
+        public ProductDetailsController(IProductDetailService ProductDetailService)
         {
             _ProductDetailService = ProductDetailService; 
         }
@@ -26,7 +26,7 @@ namespace MultiShop.Catalog.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductDetailById(string id)
         {
-            var values=_ProductDetailService.GetByIdProductDetailAsync(id);
+            var values=await _ProductDetailService.GetByIdProductDetailAsync(id);
             return Ok(values);
 
         }
@@ -56,5 +56,4 @@ namespace MultiShop.Catalog.Controllers
 
 
     }
-    }
-}
+   }

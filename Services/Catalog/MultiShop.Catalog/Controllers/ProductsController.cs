@@ -12,7 +12,7 @@ namespace MultiShop.Catalog.Controllers
     {
         private readonly IProductService _productService;
 
-        public ProductController(ProductService productService)
+        public ProductController(IProductService productService)
         {
             _productService = productService;
         }
@@ -27,7 +27,7 @@ namespace MultiShop.Catalog.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(string id)
         {
-            var values = _productService.GetByIdProductAsync(id);
+            var values = await _productService.GetByIdProductAsync(id);
             return Ok(values);
 
         }
