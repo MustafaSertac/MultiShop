@@ -12,7 +12,9 @@ namespace MultiShop.Order.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-F5U1UEQ;initial Catalog=MultiShopDiscountDb;integrated Security=true;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=localhost,1440;Initial Catalog=MultiShopDiscountDb;User Id=sa;Password=214751471936Aa**;TrustServerCertificate=True");
+
+
         }
 
         public DbSet<Address> Adresses { get; set; }

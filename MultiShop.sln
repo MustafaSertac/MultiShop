@@ -27,7 +27,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Order.WebApi", "Order\Presentation\MultiShop.Order.WebApi\MultiShop.Order.WebApi.csproj", "{354EFD53-9596-45BE-B298-ACD1B7991C51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.Persistence", "Services\Order\Infrastructure\MultiShop.Order.Persistence\MultiShop.Order.Persistence.csproj", "{878A3344-76D7-421C-B076-40DF75FEAD92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Order.Persistence", "Services\Order\Infrastructure\MultiShop.Order.Persistence\MultiShop.Order.Persistence.csproj", "{878A3344-76D7-421C-B076-40DF75FEAD92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{9A28BBFE-7C69-4CA7-B5C7-D77EA9E24ED6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.IdentityServer", "IdentityServer\MultiSHOP.IdentityServer\MultiShop.IdentityServer.csproj", "{6C4872B0-5EE0-4F00-B8CF-2F4088720B41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirement", "Requirement", "{BED550D3-40F7-4241-843D-CE211F255ABA}"
+	ProjectSection(SolutionItems) = preProject
+		PortainerCmd.txt = PortainerCmd.txt
+		PortNumbers.txt = PortNumbers.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +69,10 @@ Global
 		{878A3344-76D7-421C-B076-40DF75FEAD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{878A3344-76D7-421C-B076-40DF75FEAD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{878A3344-76D7-421C-B076-40DF75FEAD92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4872B0-5EE0-4F00-B8CF-2F4088720B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4872B0-5EE0-4F00-B8CF-2F4088720B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4872B0-5EE0-4F00-B8CF-2F4088720B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4872B0-5EE0-4F00-B8CF-2F4088720B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +90,7 @@ Global
 		{55404A39-B4E3-4D2A-B0C7-6C6C941C3D42} = {3136BC5B-A037-437E-BAA9-C32934EF7EB3}
 		{354EFD53-9596-45BE-B298-ACD1B7991C51} = {9B4789F1-64A7-47FE-8345-65B14386F302}
 		{878A3344-76D7-421C-B076-40DF75FEAD92} = {55404A39-B4E3-4D2A-B0C7-6C6C941C3D42}
+		{6C4872B0-5EE0-4F00-B8CF-2F4088720B41} = {9A28BBFE-7C69-4CA7-B5C7-D77EA9E24ED6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA6DCE55-CF10-4CD7-BFE1-51626238566B}
