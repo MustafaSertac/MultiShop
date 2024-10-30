@@ -12,7 +12,7 @@ using MultiShop.Order.Persistence.Context;
 namespace MultiShop.Order.Persistence.Migrations
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20241026080318_mig1")]
+    [Migration("20241029124802_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
