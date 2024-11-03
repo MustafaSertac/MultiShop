@@ -1,19 +1,21 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Cargo.BusinessLayer.Abstract;
 using MultiShop.Cargo.DtoLayer.Dto.CargoCompanyDtos;
+using MultiShop.Cargo.DtoLayer.Dto.CargoCustomerDtos;
 using MultiShop.Cargo.EntityLayer.Concrete;
 
 namespace MultiShop.Cargo.WebApi.Controllers
 {
-
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class CargoCompanyController : ControllerBase
+    public class CargoCompaniesController : ControllerBase
     {
         private readonly ICargoCompanyService _cargoCompanyService;
 
-        public CargoCompanyController(ICargoCompanyService cargoCompanyService)
+        public CargoCompaniesController(ICargoCompanyService cargoCompanyService)
         {
             _cargoCompanyService = cargoCompanyService;
         }
@@ -25,11 +27,11 @@ namespace MultiShop.Cargo.WebApi.Controllers
             return Ok(values);
         }
         [HttpPost]
-        public IActionResult CreateCargoCompany(CreateCargoCustomerDto createCargoCompanyDto)
+        public IActionResult CreateCargoCompany(CreateCargoCompanyDto createCargoCompanyDto)
         {
             CargoCompany cargoCompany = new CargoCompany()
             { 
-               CargoCompanyName=createCargoCompanyDto.CargoCompanyName           
+               CargoCompanyName=createCargoCompanyDto.CargoCompanyName
             }; 
             _cargoCompanyService.TInsert(cargoCompany);
             return Ok("Kargo Şirketi Başarıyla Oluşturuldu.");

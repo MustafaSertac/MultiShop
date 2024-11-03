@@ -1,4 +1,5 @@
 ﻿using MultiShop.Cargo.BusinessLayer.Abstract;
+using MultiShop.Cargo.DataAccessLayer.Abstract;
 using MultiShop.Cargo.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,36 +11,35 @@ namespace MultiShop.Cargo.BusinessLayer.Conrete
 {
     public class CargoCompanyManager : ICargoCompanyService
     {
-        private readonly ICargoCompanyService _cargoCompanyService;
-
-        public CargoCompanyManager(ICargoCompanyService cargoCompanyService)
+        private readonly ICargoCompanyDal _cargoCompanyDal;
+        public CargoCompanyManager(ICargoCompanyDal cargoCompanyDal)
         {
-            _cargoCompanyService = cargoCompanyService;
+            _cargoCompanyDal = cargoCompanyDal;
         }
 
         public void TDelete(int id)
         {
-           _cargoCompanyService.TDelete(id);
+           _cargoCompanyDal.TDelete(id);
         }
 
         public List<CargoCompany> TGetAll()
         {
-          return _cargoCompanyService.TGetAll();
+          return _cargoCompanyDal.TGetAll();
         }
 
         public CargoCompany TGetById(int id)
         {
-            return _cargoCompanyService.TGetById(id);
+            return _cargoCompanyDal.TGetById(id);
         }
 
         public void TInsert(CargoCompany entity)
         {
-            _cargoCompanyService.TInsert(entity);
+            _cargoCompanyDal.TInsert(entity);
         }
 
         public void TUpdate(CargoCompany entity)
         {
-           _cargoCompanyService.TUpdate(entity);
+           _cargoCompanyDal.TUpdate(entity);
         }
     }
 }

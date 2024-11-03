@@ -20,27 +20,27 @@ namespace MultiShop.Cargo.BusinessLayer.Conrete
 
         public void TDelete(int id)
         {
-            _cargoCustomerDal.Delete(id);
+            _cargoCustomerDal.TDelete(id);
         }
 
         public List<CargoCustomer> TGetAll()
         {
-            return _cargoCustomerDal.GetAll();
+            return _cargoCustomerDal.TGetAll();
         }
 
         public CargoCustomer TGetById(int id)
         {
-           return _cargoCustomerDal.GetById(id);
+           return _cargoCustomerDal.TGetById(id);
         }
 
         public void TInsert(CargoCustomer entity)
         {
-            _cargoCustomerDal.Insert(entity);
+            _cargoCustomerDal.TInsert(entity);
         }
 
         public void TUpdate(CargoCustomer entity)
         {
-            _cargoCustomerDal.Update(entity);
+            _cargoCustomerDal.TUpdate(entity);
         }
     }
 }
